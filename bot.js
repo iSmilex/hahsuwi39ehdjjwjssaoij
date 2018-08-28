@@ -318,11 +318,11 @@ client1.on('ready', () => {
     console.log(`[Codes] ${client1.users.size}`)
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const prefix = "2"
+const prefix1 = "2"
 client1.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-	if (!msg.content.startsWith(prefix)) return undefined;
+	if (!msg.content.startsWith(prefix1)) return undefined;
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -330,7 +330,7 @@ client1.on('message', async msg => { // eslint-disable-line
 	const serverQueue = queue.get(msg.guild.id);
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 	let command = msg.content.toLowerCase().split(" ")[0];
-	command = command.slice(prefix.length)
+	command = command.slice(prefix1.length)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 	if (command === `play`) {
 		const voiceChannel = msg.member.voiceChannel;
@@ -513,7 +513,7 @@ function play(guild, song) {
 client1.on('message', function(message) {
 	const myID = "326131905743421440";
     let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "setname")) {
+    if(message.content.startsWith(prefix1 + "setname")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client1.user.setUsername(args);
@@ -521,7 +521,7 @@ client1.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "stream")) {
+    } else if(message.content.startsWith(prefix1 + "stream")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client1.user.setGame(args , 'https://twitch.tv/6xlez1');
@@ -529,7 +529,7 @@ client1.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "ply")) {
+    } else if(message.content.startsWith(prefix1 + "ply")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client1.user.setGame(args);
@@ -537,7 +537,7 @@ client1.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "listen")) {
+    } else if(message.content.startsWith(prefix1 + "listen")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client1.user.setActivity(args, {type:'LISTENING'});
@@ -545,7 +545,7 @@ client1.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "watch")) {
+    } else if(message.content.startsWith(prefix1 + "watch")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client1.user.setActivity(args, {type:'WATCHING'});
@@ -553,7 +553,7 @@ client1.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "setavatar")) {
+    } else if(message.content.startsWith(prefix1 + "setavatar")) {
 				        if(message.author.id !== myID) return;
         client1.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
@@ -564,18 +564,18 @@ client1.on('message', function(message) {
     }
 });
 client1.on("message", message => {
- if (message.content === `${prefix}`) {
+ if (message.content === `${prefix1}`) {
   const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setColor("#000000")//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setDescription(`
-${prefix}play ⇏ لتشغيل أغنية برآبط أو بأسم
-${prefix}skip ⇏ لتجآوز الأغنية الحآلية
-${prefix}pause ⇏ إيقآف الأغنية مؤقتا
-${prefix}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol ⇏ لتغيير درجة الصوت 100 - 0
-${prefix}stop ⇏ لإخرآج البوت من الروم
-${prefix}np ⇏ لمعرفة الأغنية المشغلة حآليا
-${prefix}queue ⇏ لمعرفة قآئمة التشغيل
+${prefix1}play ⇏ لتشغيل أغنية برآبط أو بأسم
+${prefix1}skip ⇏ لتجآوز الأغنية الحآلية
+${prefix1}pause ⇏ إيقآف الأغنية مؤقتا
+${prefix1}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+${prefix1}vol ⇏ لتغيير درجة الصوت 100 - 0
+${prefix1}stop ⇏ لإخرآج البوت من الروم
+${prefix1}np ⇏ لمعرفة الأغنية المشغلة حآليا
+${prefix1}queue ⇏ لمعرفة قآئمة التشغيل
 
  `)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
    message.channel.sendEmbed(embed)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -614,11 +614,11 @@ client2.on('ready', () => {
     console.log(`[Codes] ${client2.users.size}`)
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const prefix = "3"
+const prefix2 = "3"
 client2.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-	if (!msg.content.startsWith(prefix)) return undefined;
+	if (!msg.content.startsWith(prefix2)) return undefined;
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
 	//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
@@ -626,7 +626,7 @@ client2.on('message', async msg => { // eslint-disable-line
 	const serverQueue = queue.get(msg.guild.id);
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 	let command = msg.content.toLowerCase().split(" ")[0];
-	command = command.slice(prefix.length)
+	command = command.slice(prefix2.length)
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
 	if (command === `play`) {
 		const voiceChannel = msg.member.voiceChannel;
@@ -809,7 +809,7 @@ function play(guild, song) {
 client2.on('message', function(message) {
 	const myID = "326131905743421440";
     let args = message.content.split(" ").slice(1).join(" ");
-    if(message.content.startsWith(prefix + "setname")) {
+    if(message.content.startsWith(prefix2 + "setname")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client2.user.setUsername(args);
@@ -817,7 +817,7 @@ client2.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "stream")) {
+    } else if(message.content.startsWith(prefix2 + "stream")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client2.user.setGame(args , 'https://twitch.tv/6xlez1');
@@ -825,7 +825,7 @@ client2.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "ply")) {
+    } else if(message.content.startsWith(prefix2 + "ply")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client2.user.setGame(args);
@@ -833,7 +833,7 @@ client2.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "listen")) {
+    } else if(message.content.startsWith(prefix2 + "listen")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client2.user.setActivity(args, {type:'LISTENING'});
@@ -841,7 +841,7 @@ client2.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "watch")) {
+    } else if(message.content.startsWith(prefix2 + "watch")) {
 				        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client2.user.setActivity(args, {type:'WATCHING'});
@@ -849,7 +849,7 @@ client2.on('message', function(message) {
            msg.delete(5000);
           message.delete(5000);
         });
-    } else if(message.content.startsWith(prefix + "setavatar")) {
+    } else if(message.content.startsWith(prefix2 + "setavatar")) {
 				        if(message.author.id !== myID) return;
         client2.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
@@ -860,18 +860,18 @@ client2.on('message', function(message) {
     }
 });
 client2.on("message", message => {
- if (message.content === `${prefix}`) {
+ if (message.content === `${prefix2}`) {
   const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setColor("#000000")//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
       .setDescription(`
-${prefix}play ⇏ لتشغيل أغنية برآبط أو بأسم
-${prefix}skip ⇏ لتجآوز الأغنية الحآلية
-${prefix}pause ⇏ إيقآف الأغنية مؤقتا
-${prefix}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol ⇏ لتغيير درجة الصوت 100 - 0
-${prefix}stop ⇏ لإخرآج البوت من الروم
-${prefix}np ⇏ لمعرفة الأغنية المشغلة حآليا
-${prefix}queue ⇏ لمعرفة قآئمة التشغيل
+${prefix2}play ⇏ لتشغيل أغنية برآبط أو بأسم
+${prefix2}skip ⇏ لتجآوز الأغنية الحآلية
+${prefix2}pause ⇏ إيقآف الأغنية مؤقتا
+${prefix2}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+${prefix2}vol ⇏ لتغيير درجة الصوت 100 - 0
+${prefix2}stop ⇏ لإخرآج البوت من الروم
+${prefix2}np ⇏ لمعرفة الأغنية المشغلة حآليا
+${prefix2}queue ⇏ لمعرفة قآئمة التشغيل
 
  `)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
    message.channel.sendEmbed(embed)//by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
